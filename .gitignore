@@ -1,0 +1,31 @@
+.clasp.json
+appsscript.json
+*node_modules
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# next.js
+*.next/
+/out/
+
+# production
+client/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+server/.env.local
+
+# vercel
+*.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
