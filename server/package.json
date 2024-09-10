@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle-push": "webpack && clasp push",
     "push": "npx tsc && clasp push",
+    "push-remove": "npx tsc && node trim.js && clasp push",
     "dev": "cd ../client && npm run dev"
   },
   "keywords": [],
