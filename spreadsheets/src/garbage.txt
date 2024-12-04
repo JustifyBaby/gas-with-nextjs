@@ -1,0 +1,67 @@
+// // Sheet to object
+// type DataMap = Map<SheetLabel, string>;
+// const sheetDataToMaps = (sheetName: string): DataMap[] => {
+//   const allData = getSheetDataAll(sheetName);
+
+//   const labels = allData.shift() as unknown as typeof properties;
+
+//   let mapList: DataMap[] = [];
+
+//   for (const data of allData) {
+//     const map: DataMap = new Map();
+
+//     labels?.forEach((label, index) => {
+//       if (Object.keys(map).includes(label)) map.set(label, data[index]);
+//     });
+//     mapList.push(map);
+//   }
+
+//   return mapList;
+// };
+
+
+// const sheetValByRes = <T = string>(
+//   prevData: DataMap[],
+//   response: HashMap<T>
+// ): string[][] => {
+//   const afterData = prevData.map((datum) => {
+//     const resKey = datum.get("sold");
+//     const boughtAmount = parseInt(String(response[resKey!]));
+
+//     if (boughtAmount && boughtAmount > 0) {
+//       datum.set("stock", String(parseInt(datum.get("stock")!) - boughtAmount));
+//       datum.set(
+//         "sold_prices",
+//         String(parseInt(datum.get("sold")!) + boughtAmount)
+//       );
+//       datum.set(
+//         "sold_prices",
+//         String(
+//           parseInt(datum.get("sold_prices")!) +
+//             boughtAmount * parseInt(datum.get("price")!)
+//         )
+//       );
+//     }
+
+//     return datum;
+//   });
+
+//   const values = mapToArrays(afterData);
+
+//   return values;
+// };
+
+// const mapToArrays = (maps: DataMap[]) => {
+//   let values: string[][] = [];
+//   maps.forEach((data) => {
+//     let rows: string[] = [];
+//     const keys = Object.keys(data) as unknown as SheetLabel[];
+//     keys.forEach((key) => {
+//       rows.push(data.get(key)!);
+//     });
+
+//     values.push(rows);
+//   });
+
+//   return values;
+// };

@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "push": "npx tsc && clasp push",
+    "deploy": "npx tsc && npx clasp push && npx clasp deploy -i AKfycbyrszEXC8bf29MjJBzzuGqIVmReB_jG48NUYWkjGZCXYUj07I-MWItmPeO6JOJRTqqV",
+    "dev": "cd ../client && npm run dev",
+    "export:type": "node ./helper.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.86"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.1"
+  }
 }
